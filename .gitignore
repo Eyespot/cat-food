@@ -1,0 +1,12 @@
+source/fonts/codes.txt
+node_modules/
+*.log
+Thumbs.db
+.DS_Store
+prepros.cfg
+*.sublime*
+*.map
+build/
+.publish/
+input components/
+preview/
