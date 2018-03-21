@@ -8,6 +8,19 @@
     <meta name="description" content="Еда для кошек">
     <meta name="keywords" content="">
     <link href="css/style.min.css" rel="stylesheet">
+
+    <!-- Pixel Glass -->
+    <style>
+      HTML {
+        background-repeat: no-repeat;
+        background-position:  50% 0;
+        /*background-image: url( "preview/cat-food-preview-1280.png" );*/
+        background-image: url( "preview/cat-food-status-preview-1280.png" );
+      }
+    </style>
+    <link href="pixel-glass/styles.css" rel="stylesheet">
+    <script src="pixel-glass/script.js"></script>
+    <!-- // Pixel Glass -->
   </head>
   <body class="page">
     <div style="height: 0; width: 0; position: absolute; visibility: hidden" class="symbols">
@@ -19,8 +32,116 @@
         <h2 class="goods__heading">Ты сегодня покормил кота?</h2>
 
         <div class="goods__cat-food">
-          <article class="food-card">
+          <article class="food-card  food-card--default">
+            <div class="food-card__inner">
+              <div class="food-card__backing"></div>
 
+              <div class="food-card__corner"></div>
+
+              <div class="food-card__top">Сказочное заморское яство</div>
+
+              <div class="food-card__core">
+                <h3 class="food-card__heading">Нямушка</h3>
+
+                <div class="food-card__filling">с фуа-гра</div>
+
+                <ul class="food-card__features">
+                  <li><span>10</span> порций</li>
+                  <li>мышь в подарок</li>
+                </ul>
+
+                <div class="food-card__img">
+                  <div class="food-card__volume"><span>0,5</span> кг</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="food-card__comment  food-card__comment--default">
+              Чего сидишь? Порадуй котэ, <a href="#"><span>купи</span>.</a>
+            </div>
+
+            <div class="food-card__comment  food-card__comment--selected  visually-hidden">
+              Печень утки разварная с артишоками.
+            </div>
+
+            <div class="food-card__comment  food-card__comment--disabled  visually-hidden">
+              Печалька, с фуа-гра закончился.
+            </div>
+          </article>
+
+          <article class="food-card  food-card--selected">
+            <div class="food-card__inner">
+              <div class="food-card__backing"></div>
+
+              <div class="food-card__corner"></div>
+
+              <div class="food-card__top">Сказочное заморское яство</div>
+
+              <div class="food-card__core">
+                <h3 class="food-card__heading">Нямушка</h3>
+
+                <div class="food-card__filling">с рыбой</div>
+
+                <ul class="food-card__features">
+                  <li><span>40</span> порций</li>
+                  <li><span>2</span> мыши в подарок</li>
+                </ul>
+
+                <div class="food-card__img">
+                  <div class="food-card__volume"><span>2</span> кг</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="food-card__comment  food-card__comment--default  visually-hidden">
+              Чего сидишь? Порадуй котэ, <a href="#"><span>купи</span>.</a>
+            </div>
+
+            <div class="food-card__comment  food-card__comment--selected">
+              Головы щучьи с чесноком да свежайшая сёмгушка.
+            </div>
+
+            <div class="food-card__comment  food-card__comment--disabled  visually-hidden">
+              Печалька, с рыбой закончился.
+            </div>
+          </article>
+
+          <article class="food-card  food-card--disabled">
+            <div class="food-card__inner">
+              <div class="food-card__backing"></div>
+
+              <div class="food-card__corner"></div>
+
+              <div class="food-card__top">Сказочное заморское яство</div>
+
+              <div class="food-card__core">
+                <h3 class="food-card__heading">Нямушка</h3>
+
+                <div class="food-card__filling">с курой</div>
+
+                <ul class="food-card__features">
+                  <li><span>100</span> порций</li>
+                  <li><span>5</span> мышей в подарок</li>
+                  <li>заказчик доволен</li>
+                </ul>
+
+                <div class="food-card__img">
+                  <div class="food-card__volume"><span>5</span> кг</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="food-card__comment  food-card__comment--default  visually-hidden">
+              Чего сидишь? Порадуй котэ, <a href="#"><span>купи</span>.</a>
+            </div>
+
+            <div class="food-card__comment  food-card__comment--selected  visually-hidden">
+              Чего сидишь? Порадуй котэ, <a href="#"><span>купи</span>.</a>
+            </div>
+
+            <div class="food-card__comment  food-card__comment--disabled">
+              Печалька, с курой закончился.
+            </div>
           </article>
         </div>
       </div>

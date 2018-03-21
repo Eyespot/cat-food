@@ -1,3 +1,31 @@
 .goods {
-  
+  background-image: url(../img/pattern.jpg);
+  background-position: center;
+  color: $text-light;
+
+  &__inner {
+    margin: 0 auto;
+    padding: 0 80px;
+    max-width: $max-width;
+    min-height: 680px; //temp//
+    outline: 1px solid #ffffff;
+  }
+
+  &__heading {
+    margin: 0;
+    padding-top: 39px;
+    font-family: $exo;
+    font-size: 36px;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  &__cat-food {
+    display: flex;
+    justify-content: space-between;
+    // align-items: stretch;
+    margin-top: 24px;
+    // outline: 1px solid olive;
+  }
+
 }

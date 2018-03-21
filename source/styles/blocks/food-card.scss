@@ -1,3 +1,329 @@
 .food-card {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  min-height: 510px;
+  // outline: 1px solid $text-light;
 
+  &--default.food-card--hover-disabled .food-card__inner:hover {
+    &::before,
+    .food-card__backing::after {
+      border-color: transparent transparent $border-color transparent;
+    }
+
+    &::after,
+    .food-card__backing,
+    .food-card__volume {
+      background-color: $border-color;
+    }
+  }
+
+  &--selected.food-card--hover-disabled .food-card__inner:hover {
+    &::before,
+    .food-card__backing::after {
+      border-color: transparent transparent $border-selected transparent;
+    }
+
+    &::after,
+    .food-card__backing,
+    .food-card__volume {
+      background-color: $border-selected;
+    }
+  }
+
+  &--selected {
+
+    .food-card__inner::before,
+    .food-card__backing::after {
+      border-color: transparent transparent $border-selected transparent;
+    }
+
+    .food-card__inner::after,
+    .food-card__backing,
+    .food-card__volume {
+      background-color: $border-selected;
+    }
+
+    .food-card__inner:hover {
+
+      &::before,
+      .food-card__backing::after {
+        border-color: transparent transparent $border-selected-hover transparent;
+      }
+
+      &::after,
+      .food-card__backing,
+      .food-card__volume {
+        background-color: $border-selected-hover;
+      }
+    }
+  }
+
+  &--disabled {
+
+    .food-card__inner{
+      cursor: default;
+    }
+
+    .food-card__inner,
+    .food-card__heading,
+    .food-card__filling {
+      color: $text-disabled;
+    }
+
+    .food-card__inner::before,
+    .food-card__backing::after {
+      border-color: transparent transparent $disabled-color transparent;
+    }
+
+    .food-card__inner::after,
+    .food-card__backing,
+    .food-card__volume {
+      background-color: $disabled-color;
+    }
+
+    .food-card__inner:hover {
+
+      &::before,
+      .food-card__backing::after {
+        border-color: transparent transparent $disabled-color transparent;
+      }
+
+      &::after,
+      .food-card__backing,
+      .food-card__volume {
+        background-color: $disabled-color;
+      }
+    }
+
+    .food-card__img {
+      background-image: url("../img/cat-disabled.png");
+    }
+  }
+
+  &__inner {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    padding: 4px;
+    width: 100%;
+    min-height: 480px;
+    color: $text-color;
+    cursor: pointer;
+
+    &:hover {
+
+      &::before,
+      .food-card__backing::after {
+        border-color: transparent transparent $border-hover transparent;
+      }
+
+      &::after,
+      .food-card__backing,
+      .food-card__volume {
+        background-color: $border-hover;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 0 43px 43px;
+      border-color: transparent transparent $border-color transparent;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      right: 0;
+      width: 277px;
+      height: 43px;
+      background-color: $border-color;
+      border-top-right-radius: 12px;
+    }
+  }
+
+  &__backing {
+    position: absolute;
+    top: 43px;
+    left: 0;
+    content: "";
+    width: 320px;
+    height: calc(100% - 43px);
+    background-color: $border-color;
+    border-radius: 0 0 12px 12px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -38px;
+      left: 4px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 0 42px 42px;
+      border-color: transparent transparent #f2f2f2 transparent;
+      z-index: 1;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: -43px;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 0 44px 44px;
+      border-color: transparent transparent $border-color transparent;
+    }
+  }
+
+  &__corner {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 41px 41px;
+    border-color: transparent transparent #f2f2f2 transparent;
+    z-index: 2;
+  }
+
+  &__top {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    padding-top: 18px;
+    padding-left: 3px;
+    padding-right: 12px;
+    width: 271px;
+    height: 42px;
+    background-color: #f2f2f2;
+    border-top-right-radius: 8px;
+    z-index: 2;
+  }
+
+  &__core {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-top: 41px;
+    // padding-left: 42px;
+    // padding-right: 12px;
+    // padding-bottom: 12px;
+    width: 312px;
+    // height: calc(100% - 41px);
+    background-color: #f2f2f2;
+    border-radius: 0 0 8px 8px;
+    // background-image: url("../img/cat.png");
+    // background-repeat: no-repeat;
+    // background-size: 370px 361px;
+    // background-position: -28px 162px;
+    z-index: 2;
+  }
+
+  &__heading {
+    margin: 0;
+    padding-top: 4px;
+    padding-left: 42px;
+    padding-right: 12px;
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 1;
+    color: $text-black;
+  }
+
+  &__filling {
+    margin-top: 3px;
+    padding-left: 44px;
+    padding-right: 12px;
+    font-size: 24px;
+    font-weight: bold;
+    color: $text-black;
+  }
+
+  &__features {
+    margin: 0;
+    margin-top: 15px;
+    padding: 0;
+    padding-left: 44px;
+    padding-right: 12px;
+    list-style: none;
+    font-size: 14px;
+    flex-grow: 1;
+
+    span {
+      font-weight: bold;
+    }
+  }
+
+  &__img {
+    display: flex;
+    justify-content: flex-end;
+    // flex-grow: 1;
+    padding-right: 12px;
+    padding-bottom: 12px;
+    min-height: 269px;
+    background-image: url("../img/cat.png");
+    background-repeat: no-repeat;
+    background-size: 370px 361px;
+    background-position: -28px top;
+    border-radius: 0 0 8px 8px;
+    // outline: 1px solid black;
+  }
+
+  &__volume {
+    align-self: flex-end;
+    padding-top: 13px;
+    width: 80px;
+    height: 80px;
+    font-size: 21px;
+    color: $text-light;
+    text-align: center;
+    line-height: 0.95;
+    border-radius: 50%;
+    background-color: $border-color;
+
+    span {
+      display: block;
+      font-size: 42px;
+    }
+  }
+
+  &__comment {
+    margin-top: 15px;
+    min-height: 15px;
+    font-size: 13px;
+    text-align: center;
+
+    &--disabled {
+      color: $text-yellow;
+    }
+
+    a {
+      color: $link-color;
+      text-decoration: none;
+
+      &:hover {
+        color: $link-hover;
+
+        span {
+          border-color: $link-hover;
+        }
+      }
+    }
+
+    span {
+      border-bottom: 1px dashed $link-color;
+    }
+  }
 }
