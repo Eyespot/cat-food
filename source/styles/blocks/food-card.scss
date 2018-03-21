@@ -5,7 +5,7 @@
   min-height: 510px;
   // outline: 1px solid $text-light;
 
-  &--default.food-card--hover-disabled .food-card__inner:hover {
+  &--default.food-card--hover-off .food-card__inner:hover {
     &::before,
     .food-card__backing::after {
       border-color: transparent transparent $border-color transparent;
@@ -18,7 +18,7 @@
     }
   }
 
-  &--selected.food-card--hover-disabled .food-card__inner:hover {
+  &--selected.food-card--hover-off .food-card__inner:hover {
     &::before,
     .food-card__backing::after {
       border-color: transparent transparent $border-selected transparent;
@@ -99,6 +99,18 @@
     .food-card__img {
       background-image: url("../img/cat-disabled.png");
     }
+  }
+
+  &--default .food-card__comment--default {
+    display: block;
+  }
+
+  &--selected .food-card__comment--selected {
+    display: block;
+  }
+
+  &--disabled .food-card__comment--disabled {
+    display: block;
   }
 
   &__inner {
@@ -305,20 +317,29 @@
     font-size: 13px;
     text-align: center;
 
-    &--disabled {
-      color: $text-yellow;
+    &--default {
+      display: none;
     }
 
-    a {
-      color: $link-color;
-      text-decoration: none;
+    &--selected {
+      display: none;
+    }
 
-      &:hover {
-        color: $link-hover;
+    &--disabled {
+      display: none;
+      color: $text-yellow;
+    }
+  }
 
-        span {
-          border-color: $link-hover;
-        }
+  &__link {
+    color: $link-color;
+    text-decoration: none;
+
+    &:hover {
+      color: $link-hover;
+
+      span {
+        border-color: $link-hover;
       }
     }
 

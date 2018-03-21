@@ -1,6 +1,10 @@
 .goods {
-  background-image: url(../img/pattern.jpg);
-  background-position: center;
+  background-image: linear-gradient(to top,
+                    rgba(0, 0, 0, 0.5),
+                    transparent 50%,
+                    rgba(0, 0, 0, 0.5)),
+                    url("../img/pattern.jpg");
+  background-position: center, center;
   color: $text-light;
 
   &__inner {
@@ -27,5 +31,4 @@
     margin-top: 24px;
     // outline: 1px solid olive;
   }
-
 }
