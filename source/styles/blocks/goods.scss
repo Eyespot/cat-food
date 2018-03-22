@@ -1,4 +1,6 @@
 .goods {
+  flex-grow: 1;
+  padding-bottom: 40px;
   background-image: linear-gradient(to top,
                     rgba(0, 0, 0, 0.5),
                     transparent 50%,
@@ -7,16 +9,35 @@
   background-position: center, center;
   color: $text-light;
 
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   &__inner {
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // flex-grow: 1;
     margin: 0 auto;
-    padding: 0 80px;
+    width: 100%;
     max-width: $max-width;
-    min-height: 680px; //temp//
-    outline: 1px solid #ffffff;
+    // min-height: 680px;
+    // outline: 1px solid #ffffff;
+
+    @media (min-width: 950px) {
+      // padding: 0 20px;
+    }
+
+    @media (min-width: $max-width) {
+      padding: 0 80px;
+    }
   }
 
   &__heading {
     margin: 0;
+    padding: 0 10px;
     padding-top: 39px;
     font-family: $exo;
     font-size: 36px;
@@ -26,9 +47,21 @@
 
   &__cat-food {
     display: flex;
-    justify-content: space-between;
-    // align-items: stretch;
+    flex-direction: column;
+    margin: 0 auto;
     margin-top: 24px;
+    width: 320px;
     // outline: 1px solid olive;
+
+    @media (min-width: $tablet) {
+      flex-direction: row;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
+    @media (min-width: $max-width) {
+      justify-content: space-between;
+    }
   }
 }

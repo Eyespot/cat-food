@@ -1,9 +1,27 @@
 .food-card {
   display: flex;
   flex-direction: column;
+  margin-bottom: 40px;
   width: 320px;
   min-height: 510px;
   // outline: 1px solid $text-light;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  //   margin-right: 0;
+    @media (min-width: $tablet) {
+    margin-left: 50px;
+    margin-right: 50px;
+    }
+
+    @media (min-width: $desktop) {
+      margin: 0;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 0;
+  }
 
   &--default.food-card--hover-off .food-card__inner:hover {
     &::before,
