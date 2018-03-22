@@ -16,19 +16,9 @@
   }
 
   &__inner {
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
-    // flex-grow: 1;
     margin: 0 auto;
     width: 100%;
     max-width: $max-width;
-    // min-height: 680px;
-    // outline: 1px solid #ffffff;
-
-    @media (min-width: 950px) {
-      // padding: 0 20px;
-    }
 
     @media (min-width: $max-width) {
       padding: 0 80px;
@@ -51,7 +41,6 @@
     margin: 0 auto;
     margin-top: 24px;
     width: 320px;
-    // outline: 1px solid olive;
 
     @media (min-width: $tablet) {
       flex-direction: row;

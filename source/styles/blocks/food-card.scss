@@ -4,11 +4,9 @@
   margin-bottom: 40px;
   width: 320px;
   min-height: 510px;
-  // outline: 1px solid $text-light;
 
   &:last-of-type {
     margin-bottom: 0;
-  //   margin-right: 0;
     @media (min-width: $tablet) {
     margin-left: 50px;
     margin-right: 50px;
@@ -20,7 +18,7 @@
   }
 
   @media (min-width: $desktop) {
-    margin-bottom: 0;
+    margin: 0;
   }
 
   &--default.food-card--hover-off .food-card__inner:hover {
@@ -247,17 +245,9 @@
     flex-direction: column;
     flex-grow: 1;
     margin-top: 41px;
-    // padding-left: 42px;
-    // padding-right: 12px;
-    // padding-bottom: 12px;
     width: 312px;
-    // height: calc(100% - 41px);
     background-color: #f2f2f2;
     border-radius: 0 0 8px 8px;
-    // background-image: url("../img/cat.png");
-    // background-repeat: no-repeat;
-    // background-size: 370px 361px;
-    // background-position: -28px 162px;
     z-index: 2;
   }
 
@@ -299,7 +289,6 @@
   &__img {
     display: flex;
     justify-content: flex-end;
-    // flex-grow: 1;
     padding-right: 12px;
     padding-bottom: 12px;
     min-height: 269px;
@@ -308,7 +297,6 @@
     background-size: 370px 361px;
     background-position: -28px top;
     border-radius: 0 0 8px 8px;
-    // outline: 1px solid black;
   }
 
   &__volume {
