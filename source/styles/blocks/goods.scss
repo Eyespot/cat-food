@@ -1,13 +1,14 @@
 .goods {
-  flex-grow: 1;
   padding-bottom: 40px;
+  min-height: 100vh;
+  color: $text-light;
+  background-color: #272727;
   background-image: linear-gradient(to top,
                     rgba(0, 0, 0, 0.5),
                     transparent 50%,
                     rgba(0, 0, 0, 0.5)),
                     url("../img/pattern.jpg");
   background-position: center, center;
-  color: $text-light;
 
   @media (min-width: $tablet) {
     display: flex;
