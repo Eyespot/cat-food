@@ -114,6 +114,10 @@
 
     .food-card__img {
       background-image: url("../img/cat-disabled.png");
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../img/cat-disabled@2x.png");
+      }
     }
   }
 
@@ -297,6 +301,10 @@
     background-size: 370px 361px;
     background-position: -28px top;
     border-radius: 0 0 8px 8px;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/cat@2x.png");
+    }
   }
 
   &__volume {
