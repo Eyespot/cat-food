@@ -11,6 +11,11 @@ html {
   font-size: 16px;
   color: $text-color;
   box-sizing: border-box;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 *, *::before, *::after {
